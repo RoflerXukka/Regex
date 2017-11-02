@@ -12,7 +12,7 @@ namespace RegVirznia
         static void Main(string[] args)
         {
             StreamWriter write = new StreamWriter("file2.txt");
-            Regex regex = new Regex(@"(0[1-9]|1[12])\.(0[1-9]|[12][0-9]|3[01])\.(\d\d\d\d)");
+            Regex regex = new Regex(@"(0[1-9]|1[12])\.(0[1-9]|[12][0-9]|3[01])\.([0-9]{4})");
             string text = File.ReadAllText("file.txt");
             foreach (Match match in regex.Matches(text))
             {
